@@ -5,12 +5,13 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 24px;
 }
 
 .header {
@@ -19,226 +20,197 @@ body {
 }
 
 .header-inner {
-    padding: 14px 18px;
+    padding: 16px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 16px;
-    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    font-size: clamp(20px, 4vw, 30px);
-    font-weight: 600;
-    color: white;
-    white-space: nowrap;
-}
-
-.nav {
-    display: flex;
-    align-items: center;
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 700;
+    color: #fff;
 }
 
 .nav-list {
     display: flex;
-    gap: 20px;
+    gap: 24px;
     list-style: none;
     margin: 0;
     padding: 0;
-    flex-wrap: wrap;
 }
 
 .nav-item a {
-    font-size: clamp(14px, 3vw, 19px);
-    color: white;
+    font-size: clamp(15px, 2vw, 18px);
+    color: #fff;
     text-decoration: none;
-    padding: 6px 2px;
-    transition: color 0.3s ease, text-decoration 0.3s ease;
+    padding: 6px 0;
 }
 
-.nav-item a:hover,
-.nav-item a:focus-visible {
+.nav-item a:hover {
     text-decoration: underline;
-    text-decoration-thickness: 2px;
     text-decoration-color: #FE7F2D;
     text-underline-offset: 6px;
 }
 
 .btn {
-    padding: 15px 20px;
-    border-radius: 12px;
+    padding: 14px 26px;
+    border-radius: 14px;
     background-color: #FE7F2D;
-    color: white;
-    text-decoration: none;
+    color: #fff;
     font-weight: 600;
-    display: inline-block;
-    white-space: nowrap;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
 }
 
 .btn:hover {
     background-color: #af4804;
-    transform: scale(1.05);
 }
 
 .hero {
-    padding: 80px 20px;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
     background-image:
-        linear-gradient(rgba(0, 0, 0, 0.405), rgba(0, 0, 0, 0.521)),
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.6)),
         url("img/great-view-with-mountains-and-green-valley-wallpaper-2000x1333_39 (1).jpg");
-    background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 .hero-content {
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 50px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
     text-align: center;
+    padding: 40px 20px;
 }
 
 .hero-title {
-    font-size: clamp(28px, 5vw, 40px);
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: white;
+    font-size: clamp(30px, 5vw, 46px);
+    color: #fff;
+    margin-bottom: 10px;
 }
 
 .hero-text {
-    font-size: clamp(18px, 3vw, 25px);
-    font-weight: 700;
-    color: white;
+    font-size: clamp(18px, 3vw, 24px);
+    color: #fff;
 }
 
 .features {
-    padding: 60px 20px;
+    padding: 80px 20px;
 }
 
 .features-list {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .feature-card {
-    max-width: 300px;
-    width: 100%;
-    padding: 30px;
-    border-radius: 16px;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
-    display: flex;
-    flex-direction: column;
-}
-
-.feature-card-img {
-    width: 100%;
-    object-fit: cover;
+    padding: 32px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0,0,0,.08);
+    background-color: #fff;
+    text-align: center;
 }
 
 .feature-title {
     font-size: 22px;
-    text-align: center;
+    margin: 16px 0 10px;
 }
 
 .feature-text {
-    font-size: clamp(15px, 3vw, 20px);
-    text-align: center;
+    font-size: 16px;
 }
-
 
 .blog {
-    padding: 60px 20px;
-}
-
-.blog-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 80px 20px;
 }
 
 .section-title {
     text-align: center;
-    font-size: clamp(15px, 5vw, 35px);
+    font-size: clamp(22px, 4vw, 36px);
+    margin-bottom: 40px;
 }
 
 .blog-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
 }
 
 .blog-card {
-    max-width: 350px;
-    width: 100%;
-    height: auto;
     padding: 30px;
-    margin: 0 auto;
-    border-radius: 16px;
-    box-shadow: 0 10px 24px rgba(0, 0, 5, 0.10);
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.blog-image {
-    width: 100%;
-    object-fit: cover;
-}
-
-.blog-title,
-.blog-text {
-    font-size: clamp(15px, 4vw, 20px);
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0,0,0,.1);
+    background-color: #fff;
     text-align: center;
 }
+
+.blog-title {
+    font-size: 20px;
+    margin: 14px 0 8px;
+}
+
+.blog-text {
+    font-size: 16px;
+}
+
 .footer {
-    padding: 20px 0;
-    background-color: rgba(5, 67, 30, 0.915);
-    color: white;
+    padding: 40px 20px;
+    background-color: rgba(5, 67, 30, 0.95);
+    color: #fff;
 }
 
 .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
-    gap: 50px;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
+    gap: 30px;
 }
 
 .footer-image {
     max-width: 70px;
-    width: 100%;
-    border-radius: 15px;
+    border-radius: 14px;
 }
 
 .social-icons {
     display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
+    gap: 18px;
 }
 
 .footer-title {
-    text-align: center;
-    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-size: 20px;
 }
 
 .footer-text {
-    font-size: clamp(12px, 2vw, 20px);
+    font-size: 14px;
 }
 
 @media (max-width: 760px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-list {
+        justify-content: center;
+        gap: 16px;
+    }
+
     .hero {
-        padding: 50px 20px;
+        min-height: 55vh;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
     }
 }
-
