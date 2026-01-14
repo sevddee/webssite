@@ -5,10 +5,7 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
 }
-
-/* ================= HEADER ================= */
 
 .header {
     width: 100%;
@@ -18,31 +15,33 @@ body {
 .header-inner {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 16px 20px;
+    padding: 14px 18px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 16px;
     flex-wrap: wrap;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    font-size: clamp(22px, 4vw, 30px);
+    font-size: clamp(20px, 4vw, 30px);
     font-weight: 600;
     color: white;
     white-space: nowrap;
+    flex-shrink: 1;
 }
 
 .nav {
     display: flex;
     align-items: center;
+    flex-shrink: 1;
 }
 
 .nav-list {
     display: flex;
-    gap: 24px;
+    gap: 20px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -50,11 +49,11 @@ body {
 }
 
 .nav-item a {
-    font-size: clamp(14px, 2.5vw, 18px);
+    font-size: clamp(14px, 3vw, 19px);
     color: white;
     text-decoration: none;
-    padding: 6px 0;
-    transition: color 0.3s ease;
+    padding: 6px 2px;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 .nav-item a:hover,
@@ -66,27 +65,26 @@ body {
 }
 
 .btn {
-    padding: 14px 22px;
+    padding: 15px 20px;
     border-radius: 12px;
     background-color: #FE7F2D;
     color: white;
     text-decoration: none;
     font-weight: 600;
+    display: inline-block;
     white-space: nowrap;
-    transition: background-color 0.3s ease, transform 0.25s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn:hover {
     background-color: #af4804;
-    transform: translateY(-2px);
+    transform: scale(1.05);
 }
 
-/* ================= HERO ================= */
-
 .hero {
-    padding: 100px 20px;
+    padding: 80px 20px;
     background-image:
-        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.55)),
+        linear-gradient(rgba(0, 0, 0, 0.405), rgba(0, 0, 0, 0.521)),
         url("img/great-view-with-mountains-and-green-valley-wallpaper-2000x1333_39 (1).jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -96,134 +94,118 @@ body {
 .hero-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 20px;
+    min-height: 100%;
+    padding: 50px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    justify-content: center;
+    gap: 15px;
     text-align: center;
 }
 
 .hero-title {
-    font-size: clamp(30px, 5vw, 42px);
+    font-size: clamp(28px, 5vw, 40px);
     font-weight: 600;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     color: white;
 }
 
 .hero-text {
-    font-size: clamp(17px, 3vw, 22px);
-    font-weight: 400;
-    max-width: 700px;
+    font-size: clamp(18px, 3vw, 25px);
+    font-weight: 700;
     color: white;
 }
 
-/* ================= FEATURES ================= */
-
 .features {
-    padding: 80px 20px;
+    padding: 60px 20px;
 }
 
 .features-list {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    gap: 24px;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
 .feature-card {
     max-width: 300px;
     width: 100%;
-    padding: 28px;
-    border-radius: 18px;
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+    height: auto;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    background-color: #fff;
 }
 
 .feature-card-img {
     width: 100%;
-    border-radius: 12px;
+    object-fit: cover;
 }
 
 .feature-title {
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 22px;
     text-align: center;
 }
 
 .feature-text {
-    font-size: 16px;
+    font-size: clamp(15px, 3vw, 20px);
     text-align: center;
-    color: #333;
 }
 
-/* ================= BLOG ================= */
-
 .blog {
-    padding: 80px 20px;
+    padding: 60px 20px;
 }
 
 .blog-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
 }
 
 .section-title {
     text-align: center;
-    font-size: clamp(22px, 5vw, 36px);
-    font-weight: 600;
+    font-size: clamp(15px, 5vw, 35px);
 }
 
 .blog-list {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    gap: 24px;
     justify-content: center;
+    gap: 10px;
     flex-wrap: wrap;
 }
 
 .blog-card {
     max-width: 350px;
     width: 100%;
-    padding: 28px;
-    border-radius: 18px;
-    box-shadow: 0 12px 28px rgba(0, 0, 5, 0.1);
+    height: auto;
+    padding: 30px;
+    margin: 0 auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 24px rgba(0, 0, 5, 0.10);
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    background-color: #fff;
+    gap: 15px;
 }
 
 .blog-image {
     width: 100%;
-    border-radius: 12px;
+    object-fit: cover;
 }
 
-.blog-title {
-    font-size: 20px;
-    font-weight: 600;
-    text-align: center;
-}
-
+.blog-title,
 .blog-text {
-    font-size: 16px;
+    font-size: clamp(15px, 4vw, 20px);
     text-align: center;
-    color: #444;
 }
-
-/* ================= FOOTER ================= */
 
 .footer {
-    padding: 40px 20px;
-    background-color: rgba(5, 67, 30, 0.92);
+    padding: 20px 0;
+    background-color: rgba(5, 67, 30, 0.915);
     color: white;
 }
 
@@ -231,37 +213,36 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content:center;
     gap: 50px;
     flex-wrap: wrap;
-    text-align: center;
 }
 
 .footer-image {
     max-width: 70px;
-    border-radius: 14px;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
 }
 
 .social-icons {
     display: flex;
-    gap: 16px;
-    justify-content: center;
+    gap: 15px;
     flex-wrap: wrap;
 }
 
 .footer-title {
-    font-size: clamp(16px, 2vw, 22px);
-    font-weight: 600;
+    text-align: center;
+    font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
 .footer-text {
-    font-size: clamp(13px, 2vw, 16px);
+    font-size: clamp(12px, 2vw, 20px);
 }
 
-/* ================= MOBILE ================= */
-
-@media (max-width: 760px) {
-    .hero {
-        padding: 120px 20px;
-    }
+@media(max-width:760px){
+ .hero{
+    padding: 120px 20px;
+ }
+ 
 }
