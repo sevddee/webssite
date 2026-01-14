@@ -7,14 +7,18 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 .header {
     width: 100%;
     background-color: rgb(5, 67, 30);
 }
 
 .header-inner {
-    max-width: 1200px;
-    margin: 0 auto;
     padding: 14px 18px;
     display: flex;
     align-items: center;
@@ -30,13 +34,11 @@ body {
     font-weight: 600;
     color: white;
     white-space: nowrap;
-    flex-shrink: 1;
 }
 
 .nav {
     display: flex;
     align-items: center;
-    flex-shrink: 1;
 }
 
 .nav-list {
@@ -94,7 +96,6 @@ body {
 .hero-content {
     max-width: 1200px;
     margin: 0 auto;
-    min-height: 100%;
     padding: 50px 20px;
     display: flex;
     flex-direction: column;
@@ -122,17 +123,15 @@ body {
 }
 
 .features-list {
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .feature-card {
     max-width: 300px;
     width: 100%;
-    height: auto;
     padding: 30px;
     border-radius: 16px;
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
@@ -159,20 +158,12 @@ body {
     padding: 60px 20px;
 }
 
-.blog-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .section-title {
     text-align: center;
     font-size: clamp(15px, 5vw, 35px);
 }
 
 .blog-list {
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -182,9 +173,7 @@ body {
 .blog-card {
     max-width: 350px;
     width: 100%;
-    height: auto;
     padding: 30px;
-    margin: 0 auto;
     border-radius: 16px;
     box-shadow: 0 10px 24px rgba(0, 0, 5, 0.10);
     display: flex;
@@ -210,10 +199,8 @@ body {
 }
 
 .footer-inner {
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     gap: 50px;
     flex-wrap: wrap;
 }
@@ -221,7 +208,6 @@ body {
 .footer-image {
     max-width: 70px;
     width: 100%;
-    height: auto;
     border-radius: 15px;
 }
 
@@ -240,8 +226,8 @@ body {
     font-size: clamp(12px, 2vw, 20px);
 }
 
-@media(max-width:760px){
- .hero{
-    padding: 50px 20px;
- }
+@media (max-width: 760px) {
+    .hero {
+        padding: 50px 20px;
+    }
 }
